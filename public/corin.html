@@ -4,7 +4,7 @@
                       
         <!-- Regular MetaData for SEO -->
     
-        <title>Grandma's Treasures - Farm inspired recipes | Home </title>
+        <title>Corin Ludwig-Simkin - Webdesigner</title>
         <meta charset="utf-8"><!-- html5 version of http-equiv="Content-Type"... -->
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="{{description}}">
@@ -32,7 +32,7 @@
         <!-- CSS Styles -->
         
         <style type="text/css">
-            @import url('https://fonts.googleapis.com/css?family=Cabin|Old+Standard+TT');
+            @import url('https://fonts.googleapis.com/css?family=Lora:400,400i|Roboto:700');
             
             * {
                 margin:0;
@@ -59,17 +59,18 @@
             body {
                 color:black;
                 width:100%;
-                font-family: 'Old Standard TT', serif;
-
+                font-family: 'Lora', serif;
+                overflow:hidden;
             }
             
             a {
                 color: black;
                 text-decoration: none;
+                cursor:pointer;
             }
             
             h1, h2, h3, h4, h5, h6 {
-                 font-family: 'Cabin', sans-serif;
+                 font-family: 'Roboto', sans-serif;
             }
             
             h1 {
@@ -91,22 +92,45 @@
                 font-size:1.5rem;
                 padding: 0.25rem 0 0.25rem 0;
                 color:white;
-                bottom:50vh;
-                position:absolute;
+                bottom:0vh;
+                position:relative;
             }
             
             p {
-                font-size:0.75rem;
+                font-size:0.60rem;
                 text-align: justify;
+                font-family: 'Lora', serif;
+                transition:all 1s ease;
             }
             
             section {
                 padding: 0 8vw;
             }
             
-            #about {
-                background-color:black;
+            #navigation {
                 height:50vh;
+                background-color: black;
+            }
+            #about {
+                width:100%;
+                position:relative;
+                max-height:50vh;
+            }
+            .padding-on {
+                position: absolute;
+                bottom: -50vh;
+            }
+            
+            .padding-off {
+                padding-top:0vh;
+            }
+            
+            .hidden {
+                display:none;
+            }
+            
+            .visible {
+                display:block;
             }
             
             #profile-txt {
@@ -128,7 +152,19 @@
                 float:left;
             }
             .content-img {
-                width:100%;
+                max-width:100%;
+                height:auto;
+            }
+            .menu-small {
+                height:10vh;
+                position:relative;
+            }
+            .menu-active {
+                height:70vh;
+                position:relative;
+            }
+            #branding {
+                display:block;
             }
             
         </style>
@@ -141,30 +177,29 @@
     <body>
         <header id="navigation">
             <section id="about">
+                <div id="bio" class="padding-on">
                 <h1>
-                    <a href="#profile">
+                    <a id="corin" href="#profile">
                         Corin Ludwig-Simkin
                     </a>
                 </h1>
-                <div id="profile">
+                <div id="profile" class="hidden">
                     <div id="profile-txt">
                         <p>
                             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea  takimata sanctus est Lorem ipsum dolor sit amet.   
                         </p>
-                        <p>    
-                            Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
-                        </p>
                     </div>
+                </div>
                 </div>
             </section>
         </header>
         <section id="design">
             <h2>
-                <a href="#design">
+                <a href="#design" id="design-click">
                     Design
                 </a>
             </h2>
-            <div id="branding">
+            <div id="design-content" class="hidden">
                 <a href="">
                     prev
                 </a>
@@ -175,7 +210,7 @@
                     <div class="content-txt">
                         <h3>Branding Headline</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.  
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
                         </p>
                         <a href="">
                             Link
@@ -202,7 +237,27 @@
             </h2>
         </section>
         
+
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" integrity="sha256-iT+n/otuaeKCgxnASny7bxKeqCDbaV1M7VdX1ZRQtqg=" crossorigin="anonymous"></script>
+<!--        <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" integrity="sha256-iT+n/otuaeKCgxnASny7bxKeqCDbaV1M7VdX1ZRQtqg=" crossorigin="anonymous"></script>-->
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+                        <script type="text/javascript">
+                    $(document).ready(function() {
+                        $("#corin").click(function() {
+                            $("#bio").toggleClass("padding-on");
+                            $("#profile").toggleClass("visible");
+
+                        });
+                        
+                        
+                        $("#design-click").click(function() {
+                            $("#navigation").toggleClass("menu-small");
+                            $("#design").toggleClass("menu-active");
+                            $("#coding").toggleClass("menu-small");
+                            $("#branding").toggleClass("menu-small");
+                            $("#design-content").toggleClass("visible");
+                        });
+                    });
+        </script>
     </body>
 </html>
